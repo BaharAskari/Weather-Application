@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: #43AFFC;
+}
+
+.wrapper{
+  width: 35%;
+  border-radius: 2.375rem;
+  background:#fff;
+  text-align: center;
+  padding: 2rem;
+  margin: 0;
+  position: absolute;
+  box-shadow: 24px 24px 48px rgba(174, 210, 236, 0.4),
+   inset 12px 12px 24px #e7f2f9, inset -24px -24px 48px #b8d8ee;
+  
+}
+
+.wrapper .header{
+  color: #43AFFC;
+  font-size: 25px;
+  font-weight: 500;
+  padding: 20px 15px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #bfbfbf;
+}
+
+.header i{
+  cursor: pointer;
+  font-size: 0px;
+  margin-right: 8px;
+  
+}
+
+.wrapper.active .header i{
+  font-size: 30px;
+  margin-left: 5px;
+}
+
+.wrapper .input-part {
+  margin: 2rem 2.5rem 3rem;
+}
+
+.wrapper.active .input-part{
+  display: none;
+}
+
+.input-part .info-text{
+  display: none;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem 1rem;
+  border-radius: .5rem;
+  margin-bottom: 1.2rem;
+}
+
+.info-text.error{
+  display: block;
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+.info-text.pendding{
+  display: block;
+  color: #0c5460;
+  background: #d1ecf1;
+  border: 1px solid #bee5eb;
+}
+
+.input-part :where(input, button){
+  width: 100%;
+  height: 4rem;
+  border: none;
+  outline: none;
+}
+
+.input-part input{
+  text-align: center;
+  border: 1px solid #bfbfbf;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.input-part input:focus{
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.input-part input:is(:focus, :valid){
+  border: 2px solid #43AFFC;
+}
+
+.input-part .separator{
+  height: .1rem;
+  width: 100%;
+  margin: 1.5rem 0;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.separator::before{
+  content: "or";
+  color: #ccc;
+  background: #fff;
+  font-size: 1.3rem;
+  padding: 0 1.5rem;
+}
+
+.input-part .btn{
+  color: #fff;
+  cursor: pointer;
+  background: #43AFFC;
+  border-radius: .5rem;
+  transition: .3s;
+    box-shadow: 0px 4px 24px #b5d6ee,
+    inset 6px 6px 12px #63a5d9,
+    inset -12px -12px 24px #3e90d0;
+  
+}
+
+.input-part .btn:hover{
+  color: #43AFFC;
+  background: #ffff;
+  border: 1px solid #43AFFC;
+  box-shadow: 0 0 10px #9ecaed;
+}
+
+.wrapper .weather-part{
+  margin: 2rem 0 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.wrapper.active .weather-part{
+  display: flex;
+}
+
+.weather-part .weather-image{
+max-width:125px;
+}
+
+.weather-part .temp{
+  display: flex;
+  font-size: 72px;
+  font-weight: 500;
+}
+
+.weather-part .temp .numb{
+  font-weight: 600;
+}
+
+.weather-part .temp .deg{
+  font-size: 40px;
+  margin: 10px 5px 0 0;
+  display: block;
+}
+
+.weather-part .weather{
+font-size: 21px;
+text-align: center;
+margin: -5px 20px 15px;
+}
+
+.weather-part .location{
+  display: flex;
+  align-items: center;
+  font-size: 21px;
+  margin-bottom: 30px;
+
+}
+
+.location i{
+  font-size: 22px;
+  margin-right: 5px;
+}
+
+.weather-part .bottom-details{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #bfbfbf;
+  justify-content: space-between;
+}
+
+.bottom-details .column{
+ width: 100%;
+ display: flex;
+ padding: 15px 0;
+ align-items: center;
+ justify-content: center;
+}
+
+.column i{
+  color: #43AFFC;
+  font-size: 40px;
+}
+
+.column.humidity{
+ border-left: 1px solid #bfbfbf;
+}
+
+.details .temp,
+.humidity span{
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: -3px;
+}
+
+.details .temp .deg{
+  margin: 0;
+font-size: 17px;
+padding: 0 2px 1px;
+}
+
+.details p{
+  font-size: 14px;
+  margin-top: -6px;
+}

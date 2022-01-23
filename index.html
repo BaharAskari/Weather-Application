@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App in JavaScript</title>
+  <!-- custome css -->
+  <link rel="stylesheet" href="./CSS/style.css">
+  <!-- linking BoxIcon -->
+    <link rel="stylesheet"
+  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./Weather Icons/Favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="./Weather Icons/Favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="./Weather Icons/Favicon/favicon-16x16.png">
+<link rel="manifest" href="./Weather Icons/Favicon/site.webmanifest">
+
+</head>
+<body>
+  <div class="wrapper">
+
+    <header class="header"><i class='bx bx-left-arrow-alt'></i>Weather App</header>
+
+    <section class="input-part">
+      <p class="info-text"></p>
+      <input type="text" placeholder="Enter city name" spellcheck="false" required>
+      <div class="separator"></div>
+      <button class="btn">Get Device Location</button>
+    </section>
+
+    <section class="weather-part">
+      <img class="weather-image" src="#" alt="Weather Icon">
+
+      <div class="temp">
+        <span class="numb">_</span>
+        <span class="deg">°</span>C
+      </div>
+
+      <div class="weather">_ _</div>
+      <div class="location">
+        <i class="bx bx-map"></i>
+        <span>_, _ </span>
+      </div>
+
+      <div class="bottom-details">
+
+        <div class="column feels">
+         <i class='bx bxs-thermometer'></i>
+         <div class="details">
+           <div class="temp">
+        <span class="numb-2">_</span>
+        <span class="deg">°</span>C
+      </div>
+      <p>Feels like</p>
+         </div>
+        </div>
+
+              <div class="column humidity">
+         <i class='bx bxs-droplet-half'></i>
+         <div class="details">
+      <span>_</span>
+      <p>Humidity</p>
+         </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+
+
+
+
+
+
+  <script src="./JS/script.js"></script>
+</body>
+</html>
